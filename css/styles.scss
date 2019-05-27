@@ -1,3 +1,4 @@
+//Mobile first approach
 body, html{
   height: 100%;
   font-family: 'Montserrat', sans-serif;
@@ -23,8 +24,7 @@ body, html{
     display: -moz-box;
     display: -ms-flexbox;
     padding: 15px;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: no-repeat center;
     background-size: cover;
     z-index: 1;
 
@@ -174,6 +174,82 @@ body, html{
         position: relative;
         top: 50px;
         text-align: center;
+      }
+    }
+  }
+}
+
+// Styling for mobile devices with height less than 700px (Galaxy s5, iphone 5s etc)
+@media screen and ( max-height: 699px ) {
+  body #registration {
+    font-size: 14px;
+
+    .container-fluid{
+      #reg-form{
+        .logo {
+          height: 40px;
+          width: 40px;
+          font-size: 30px;
+        }
+        .title {
+          font-size: 20px;
+        }
+        button{
+          bottom: 5%;
+        }
+      }
+    }
+  }
+}
+
+// Styling for desktops/laptops
+@media screen and ( min-width: 1024px ) {
+  body #registration .container-fluid{
+    width: 40vw;
+    padding: 35px;
+  }
+  body #login .container-fluid, html #login .container-fluid {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Styling for ipad pro
+@media screen and ( min-height: 1200px ) {
+  body #registration{
+    min-height: 50vh;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+
+    .container-fluid{
+      width: 60vw;
+      padding: 35px;
+
+      #reg-form{
+        button{
+          bottom: 5%;
+        }
+      }
+    }
+  }
+}
+
+// Styling for ipad devices
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  body #registration {
+    min-height: 70vh;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    .container-fluid{
+      width: 70vw;
+      padding: 35px;
+
+      #reg-form{
+        button{
+          bottom: 5%;
+        }
       }
     }
   }

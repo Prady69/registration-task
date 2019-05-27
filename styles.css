@@ -18,8 +18,7 @@ body, html {
     display: -moz-box;
     display: -ms-flexbox;
     padding: 15px;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: no-repeat center;
     background-size: cover;
     z-index: 1; }
     body #registration .container-fluid, html #registration .container-fluid {
@@ -129,5 +128,47 @@ body, html {
         position: relative;
         top: 50px;
         text-align: center; }
+
+@media screen and (max-height: 699px) {
+  body #registration {
+    font-size: 14px; }
+    body #registration .container-fluid #reg-form .logo {
+      height: 40px;
+      width: 40px;
+      font-size: 30px; }
+    body #registration .container-fluid #reg-form .title {
+      font-size: 20px; }
+    body #registration .container-fluid #reg-form button {
+      bottom: 5%; } }
+@media screen and (min-width: 1024px) {
+  body #registration .container-fluid {
+    width: 40vw;
+    padding: 35px; }
+
+  body #login .container-fluid, html #login .container-fluid {
+    left: 50%;
+    transform: translate(-50%, -50%); } }
+@media screen and (min-height: 1200px) {
+  body #registration {
+    min-height: 50vh;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%); }
+    body #registration .container-fluid {
+      width: 60vw;
+      padding: 35px; }
+      body #registration .container-fluid #reg-form button {
+        bottom: 5%; } }
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  body #registration {
+    min-height: 70vh;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%); }
+    body #registration .container-fluid {
+      width: 70vw;
+      padding: 35px; }
+      body #registration .container-fluid #reg-form button {
+        bottom: 5%; } }
 
 /*# sourceMappingURL=styles.css.map */
