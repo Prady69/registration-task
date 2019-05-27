@@ -13,7 +13,6 @@
         ];
 
         form.addEventListener('submit', () => {
-            formBox.classList = [];
             if (!validatePassword()) {
                 event.preventDefault();
                 // Delegating a keyup event only if password doesn't satisfy all the validations
@@ -45,6 +44,7 @@
             });
 
             //These classes will have corresponding bg color to be applied for alert box
+            formBox.classList = [];
             if(!isFormValid){
                 formBox.classList.add('alert','alert-danger','invalid');
             } else {
