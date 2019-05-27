@@ -1,4 +1,94 @@
-body {
-  background-color: #343434; }
+body, html {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background: black; }
+  body #registration, html #registration {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1; }
+    body #registration .container-fluid, html #registration .container-fluid {
+      width: 100vw;
+      overflow: hidden;
+      background: #9152f8;
+      background: -webkit-linear-gradient(top, #2193b0, #6dd5ed);
+      border-radius: 10px;
+      padding: 55px 15px 37px 15px; }
+      body #registration .container-fluid #reg-form .logo, html #registration .container-fluid #reg-form .logo {
+        font-size: 60px;
+        color: #333333;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 auto; }
+      body #registration .container-fluid #reg-form .title, html #registration .container-fluid #reg-form .title {
+        font-size: 30px;
+        color: #fff;
+        line-height: 1.2;
+        text-align: center;
+        text-transform: uppercase;
+        display: block;
+        font-weight: 600;
+        padding: 30px 30px 45px; }
+      body #registration .container-fluid #reg-form .form-group, html #registration .container-fluid #reg-form .form-group {
+        border-bottom: solid 2px #fff;
+        margin-bottom: 60px;
+        position: relative; }
+        body #registration .container-fluid #reg-form .form-group input, html #registration .container-fluid #reg-form .form-group input {
+          background: none;
+          border: none;
+          box-shadow: none;
+          outline: none;
+          font-size: 18px;
+          color: #fff;
+          line-height: 1.2;
+          display: block;
+          width: 100%;
+          height: 40px;
+          padding-left: 50px; }
+          body #registration .container-fluid #reg-form .form-group input::placeholder, html #registration .container-fluid #reg-form .form-group input::placeholder {
+            color: inherit;
+            font-weight: 100; }
+        body #registration .container-fluid #reg-form .form-group i, html #registration .container-fluid #reg-form .form-group i {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          font-size: 18px;
+          color: white; }
+      body #registration .container-fluid #reg-form button, html #registration .container-fluid #reg-form button {
+        border-radius: 20px;
+        padding: 8px 24px;
+        font-size: 18px;
+        background: #fff;
+        color: #2294b1;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+      body #registration .container-fluid #reg-form .link-login, html #registration .container-fluid #reg-form .link-login {
+        position: absolute;
+        bottom: 8%;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: pre; }
 
 /*# sourceMappingURL=styles.css.map */
