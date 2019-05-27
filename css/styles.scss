@@ -105,6 +105,7 @@ body, html{
           bottom: 10%;
           left: 50%;
           transform: translate(-50%, -50%);
+          outline: none;
         }
 
         .link-login{
@@ -119,13 +120,13 @@ body, html{
       ul{
         position: relative;
 
+
         &::before{
           content: "";
           position: absolute;
           top: -30px;
           left: 15px;
           border: solid 15px transparent;
-          border-right-color: #f2dede;
           z-index: 1;
           transform: rotate(-272deg);
         }
@@ -137,6 +138,42 @@ body, html{
         &.valid::before {
           border-right-color: #dff0d8;
         }
+
+        li{
+          &.valid{
+            color: #3c763d;
+            i::before{
+              content: "\e013";
+            }
+          }
+          &.invalid{
+            i::before{
+              content: "\e014";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #login{
+    position: relative;
+    height: 100vh;
+    color: #fff;
+
+    .container-fluid{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      h3{
+        text-align: center;
+      }
+
+      .register-again{
+        position: relative;
+        top: 50px;
+        text-align: center;
       }
     }
   }

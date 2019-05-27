@@ -87,7 +87,8 @@ body, html {
         position: absolute;
         bottom: 10%;
         left: 50%;
-        transform: translate(-50%, -50%); }
+        transform: translate(-50%, -50%);
+        outline: none; }
       body #registration .container-fluid #reg-form .link-login, html #registration .container-fluid #reg-form .link-login {
         position: absolute;
         bottom: 8%;
@@ -102,12 +103,31 @@ body, html {
           top: -30px;
           left: 15px;
           border: solid 15px transparent;
-          border-right-color: #f2dede;
           z-index: 1;
           transform: rotate(-272deg); }
         body #registration .container-fluid ul.invalid::before, html #registration .container-fluid ul.invalid::before {
           border-right-color: #f2dede; }
         body #registration .container-fluid ul.valid::before, html #registration .container-fluid ul.valid::before {
           border-right-color: #dff0d8; }
+        body #registration .container-fluid ul li.valid, html #registration .container-fluid ul li.valid {
+          color: #3c763d; }
+          body #registration .container-fluid ul li.valid i::before, html #registration .container-fluid ul li.valid i::before {
+            content: "\e013"; }
+        body #registration .container-fluid ul li.invalid i::before, html #registration .container-fluid ul li.invalid i::before {
+          content: "\e014"; }
+  body #login, html #login {
+    position: relative;
+    height: 100vh;
+    color: #fff; }
+    body #login .container-fluid, html #login .container-fluid {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+      body #login .container-fluid h3, html #login .container-fluid h3 {
+        text-align: center; }
+      body #login .container-fluid .register-again, html #login .container-fluid .register-again {
+        position: relative;
+        top: 50px;
+        text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */
