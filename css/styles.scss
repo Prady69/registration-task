@@ -7,6 +7,14 @@ body, html{
   line-height: 1.5;
   background: black;
 
+  ul{
+    list-style-type: none;
+  }
+
+  .no-show{
+    display: none;
+  }
+
   #registration {
     width: 100%;
     min-height: 100vh;
@@ -26,7 +34,7 @@ body, html{
       background: #9152f8;
       background: -webkit-linear-gradient(top, #2193b0, #6dd5ed);
       border-radius: 10px;
-      padding: 55px 15px 37px 15px;
+      padding: 35px 15px 37px 15px;
 
       #reg-form {
         .logo {
@@ -46,19 +54,19 @@ body, html{
           margin: 0 auto;
         }
         .title{
-          font-size: 30px;
+          font-size: 26px;
           color: #fff;
           line-height: 1.2;
           text-align: center;
           text-transform: uppercase;
           display: block;
           font-weight: 600;
-          padding: 30px 30px 45px;
+          padding: 30px 30px 35px;
         }
 
         .form-group{
           border-bottom: solid 2px #fff;
-          margin-bottom: 60px;
+          margin-bottom: 30px;
           position: relative;
 
           input{
@@ -105,6 +113,29 @@ body, html{
           left: 50%;
           transform: translateX(-50%);
           white-space: pre;
+        }
+      }
+
+      ul{
+        position: relative;
+
+        &::before{
+          content: "";
+          position: absolute;
+          top: -30px;
+          left: 15px;
+          border: solid 15px transparent;
+          border-right-color: #f2dede;
+          z-index: 1;
+          transform: rotate(-272deg);
+        }
+
+        &.invalid::before {
+          border-right-color: #f2dede;
+        }
+
+        &.valid::before {
+          border-right-color: #dff0d8;
         }
       }
     }
